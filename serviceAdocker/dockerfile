@@ -1,0 +1,9 @@
+FROM python:3.9
+
+COPY bitcoin-price.py ./
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["python", "bitcoin-price.py"]

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-price-app
+  labels:
+    app: my-price-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-price-app
+  template:
+    metadata:
+      labels:
+        app: my-price-app
+    spec:
+      containers:
+      - name: my-price-app
+        image: sevmars/bitcoin-price-image:latest
+        ports:
+        - containerPort: 8000
