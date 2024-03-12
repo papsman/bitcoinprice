@@ -13,6 +13,8 @@ variables.tf
 
 2. Deploying Services:
 
+Use the dockerfile to create a docker image.
+
 Use the Deployment.yml file to create the Kubernetes deployment.
 
 It includes the bitcoin price app and the rest api service.
