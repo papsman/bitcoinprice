@@ -1,20 +1,16 @@
 Prerequisites:
 
-Azure account with active subscription
-Terraform installed and configured
-kubectl installed
+Azure account with active subscription Terraform installed and configured kubectl installed
 
-1. Terraform Configuration:
-main.tf
-outputs.tf
-providers.tf
-ssh.tf
-variables.tf
 
-2. Deploying Services:
+Step 1 - Deploy AKS Infrastructure:
 
-Use the dockerfile to create a docker image.
+Use the Terraform configuration files in terraform-test to start a an AKS cluster : **main.tf outputs.tf providers.tf ssh.tf variables.tf**
 
-Use the Deployment.yml file to create the Kubernetes deployment.
+Detailed steps can be found in the terraformsetup.sh file.
 
-It includes the bitcoin price app and the rest api service.
+Step 2 - Deploying apps and kubernetes services:
+
+1. Create the docker images using the docker files in the folders serviceAdocker and serviceBdocker
+
+2. Use the Deployment.yml file to create the Kubernetes deployment. It includes the bitcoin price app and the rest api service.
